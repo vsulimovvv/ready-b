@@ -3794,15 +3794,16 @@ body.no-scroll {
 }
 
 .form-select {
-  max-width: 725px;
+  max-width: 735px;
   width: 100%;
 }
 .form-select__inner {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (auto)[4];
-  grid-template-columns: repeat(4, auto);
+  -ms-grid-columns: 183px 1fr 1fr auto;
+  grid-template-columns: 183px 1fr 1fr auto;
   width: 100%;
+  gap: 10px;
   margin-bottom: 25px;
   background-color: var(--color-white);
   line-height: 1;
@@ -3814,6 +3815,9 @@ body.no-scroll {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -3877,10 +3881,34 @@ body.no-scroll {
     grid-template-columns: 1fr;
   }
 }
+.form-select .choices {
+  border: 1px solid #dddddd;
+}
+.form-select .choices::after {
+  top: 17px !important;
+}
+@media (max-width: 767.98px) {
+  .form-select .choices {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1/2;
+  }
+}
+@media (max-width: 576px) {
+  .form-select .choices {
+    grid-column: initial;
+    grid-row: initial;
+  }
+}
+.form-select .choices__inner {
+  padding-left: 10px;
+}
 .form-select__select {
   border: none;
-  max-width: 160px;
-  width: 100%;
+  width: 160px;
   position: relative;
 }
 .form-select__select::before {
@@ -3914,9 +3942,13 @@ body.no-scroll {
 .form-select__select .list {
   width: 100% !important;
 }
+.form-select__name {
+  margin-bottom: 20px;
+  font-size: 14px;
+}
 .form-select__submit {
   font-size: 15px;
-  width: 150px;
+  width: 120px;
 }
 @media (max-width: 767.98px) {
   .form-select__submit {
@@ -3942,6 +3974,31 @@ body.no-scroll {
   .form-select__bottom {
     padding-right: 5px;
   }
+}
+.form-select__group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 20px;
+}
+@media (max-width: 576px) {
+  .form-select__group {
+    margin-top: 10px;
+  }
+}
+.form-select__group .range-slider {
+  max-width: 100%;
+}
+.form-select__group .range-slider__max, .form-select__group .range-slider__min {
+  height: 40px;
+  font-size: 12px;
 }
 .form-select__btn {
   color: #94949d;

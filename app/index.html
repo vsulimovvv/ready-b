@@ -195,18 +195,44 @@
               <option value="2">Категория 2</option>
               <option value="3">Категория 3</option>
             </select>
-            <select class="form-select__select">
-              <option>Стоимость</option>
-              <option value="1">Категория 1</option>
-              <option value="2">Категория 2</option>
-              <option value="3">Категория 3</option>
-            </select>
-            <select class="form-select__select form-select__select--no-border">
-              <option>Окупаемость</option>
-              <option value="1">Категория 1</option>
-              <option value="2">Категория 2</option>
-              <option value="3">Категория 3</option>
-            </select>
+
+            <div class="form-select__group">
+              <p class="form-select__name">Стоимость</p>
+              <div class="range-slider range-slider--cost">
+                <div class="range-slider__range" id="slider-handles"></div>
+                <div class="range-slider__values">
+                  <input
+                    class="range-slider__min"
+                    type="text"
+                    placeholder="От 10 000"
+                  />
+                  <input
+                    class="range-slider__max"
+                    type="text"
+                    placeholder="До 100 млн"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-select__group">
+              <p class="form-select__name">Окупаемость</p>
+              <div class="range-slider range-slider--profit">
+                <div class="range-slider__range" id="slider-profit"></div>
+                <div class="range-slider__values">
+                  <input
+                    class="range-slider__min"
+                    type="text"
+                    placeholder="От 10 000"
+                  />
+                  <input
+                    class="range-slider__max"
+                    type="text"
+                    placeholder="До 100 млн"
+                  />
+                </div>
+              </div>
+            </div>
+
             <button class="form-select__submit btn btn--dark" type="submit">
               Найти
             </button>
