@@ -1,0 +1,87 @@
+.business {
+  @include adaptive-value("padding-top", 80, 50, 1);
+  @include adaptive-value("padding-bottom", 80, 50, 1);
+
+  &__top {
+    @include adaptive-value("margin-bottom", 50, 40, 1);
+    display: grid;
+    grid-template-columns: auto auto 1fr;
+    gap: 40px;
+    align-items: center;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: auto auto;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__found {
+    height: 47px;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 400;
+    color: #232323;
+    width: auto;
+
+    @include breakpointsMaxW($bp-991) {
+      justify-self: end;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      justify-self: start;
+    }
+
+    span {
+      margin-left: 10px;
+      font-weight: 700;
+      color: var(--color-accent);
+    }
+  }
+
+  &__title {
+    @include fz25();
+  }
+
+  &__sort {
+    justify-self: end;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-column: 1/-1;
+      justify-self: start;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 45px 35px;
+    @include adaptive-value("margin-bottom", 85, 50, 1);
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 45px 20px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+

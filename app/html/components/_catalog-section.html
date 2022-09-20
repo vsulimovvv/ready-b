@@ -1,0 +1,753 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__top">
+      <h1 class="catalog__title">Все автомойки</h1>
+      <div class="catalog__sort sort">
+        <span class="sort__name"> Сортировать: </span>
+
+        <div class="sort__inner">
+          <ul class="sort__list">
+            <li class="sort__item">
+              <button class="sort__btn active" type="button">По дате</button>
+            </li>
+            <li class="sort__item">
+              <button class="sort__btn" type="button">Сначала дороже</button>
+            </li>
+            <li class="sort__item">
+              <button class="sort__btn" type="button">Сначала дешевле</button>
+            </li>
+            <li class="sort__item">
+              <button class="sort__btn" type="button">По прибыли</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <button
+        class="catalog__filter-btn"
+        type="button"
+        aria-label="Показать фильтры"
+      >
+        <svg>
+          <use xlink:href="images/sprite.svg#filter"></use>
+        </svg>
+      </button>
+    </div>
+
+    <div class="catalog__inner">
+      <div class="catalog__side side">
+        <div class="side__inner">
+          <form class="form-filter">
+            <div class="form-filter__group">
+              <label class="checkbox">
+                <input class="checkbox__input" type="checkbox" checked />
+                <span class="checkbox__box"></span>
+                <span class="checkbox__text">Эксклюзивное предложение</span>
+              </label>
+            </div>
+            <div class="form-filter__group">
+              <label class="form-filter__name" for="category">
+                Категория бизнеса
+              </label>
+              <select class="form-filter__select" id="category">
+                <option value="1">Автомойки</option>
+                <option value="2">Автомойки</option>
+                <option value="3">Автомойки</option>
+                <option value="4">Автомойки</option>
+              </select>
+            </div>
+            <div class="form-filter__group">
+              <p class="form-filter__name">Стоимость</p>
+              <div class="range-slider range-slider--cost">
+                <div class="range-slider__range" id="slider-handles"></div>
+                <div class="range-slider__values">
+                  <input
+                    class="range-slider__min"
+                    type="text"
+                    placeholder="От 10 000"
+                  />
+                  <input
+                    class="range-slider__max"
+                    type="text"
+                    placeholder="До 100 млн"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-filter__group">
+              <label class="form-filter__name">Окупаемость</label>
+              <select class="form-filter__select">
+                <option value="1">Окупаемость</option>
+                <option value="2">Окупаемость</option>
+                <option value="3">Окупаемость</option>
+                <option value="4">Окупаемость</option>
+              </select>
+            </div>
+
+            <div class="form-filter__group">
+              <p class="form-filter__name">Прибыль</p>
+              <div class="range-slider range-slider--profit">
+                <div class="range-slider__range" id="slider-profit"></div>
+                <div class="range-slider__values">
+                  <input
+                    class="range-slider__min"
+                    type="text"
+                    placeholder="От 10 000"
+                  />
+                  <input
+                    class="range-slider__max"
+                    type="text"
+                    placeholder="До 100 млн"
+                  />
+                </div>
+              </div>
+            </div>
+            <div class="form-filter__group">
+              <label class="form-filter__name">Метро</label>
+              <select class="form-filter__select">
+                <option value="1">Метро</option>
+                <option value="2">Метро</option>
+                <option value="3">Метро</option>
+                <option value="4">Метро</option>
+              </select>
+            </div>
+            <div class="form-filter__group">
+              <label class="form-filter__name">Район</label>
+              <select class="form-filter__select">
+                <option value="1">Район</option>
+                <option value="2">Район</option>
+                <option value="3">Район</option>
+                <option value="4">Район</option>
+              </select>
+            </div>
+
+            <div class="form-filter__btns">
+              <button class="form-filter__btn btn btn--dark" type="submit">
+                Применить
+              </button>
+              <button class="form-filter__reset" type="reset">Очистить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="catalog__content">
+        <ul class="catalog__list">
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/1.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#">
+                    <span>Производство корпусной мебели</span>
+                  </a>
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/2.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Прибыльная кофейня</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/3.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Автомойка самообслуживания</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/1.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#">
+                    <span>Производство корпусной мебели</span>
+                  </a>
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/2.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Прибыльная кофейня</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/3.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Автомойка самообслуживания</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/1.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#">
+                    <span>Производство корпусной мебели</span>
+                  </a>
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/2.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Прибыльная кофейня</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/3.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Автомойка самообслуживания</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/1.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#">
+                    <span>Производство корпусной мебели</span>
+                  </a>
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/2.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Прибыльная кофейня</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+          <li class="business__item">
+            <article class="product-card">
+              <a class="product-card__top" href="#">
+                <img src="images/products/3.jpg" loading="lazy" alt="product" />
+              </a>
+              <div class="product-card__body">
+                <h3 class="product-card__title">
+                  <a class="card-link" href="#"
+                    ><span>Автомойка самообслуживания</span></a
+                  >
+                </h3>
+  
+                <ul class="product-card__list">
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/profit.png"
+                        alt="Прибыль"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                  <li class="product-card__item">
+                    <div class="product-card__left">
+                      <img
+                        src="images/payback.png"
+                        alt="Окупаемость"
+                        width="16"
+                        height="16"
+                      />
+                      <span> Прибыль </span>
+                    </div>
+                    <div class="product-card__right">Окупаемость</div>
+                  </li>
+                </ul>
+  
+                <div class="product-card__bottom">
+                  <p class="product-card__price">3 200 000 ₽</p>
+                  <a class="product-card__btn btn btn--dark" href="#"
+                    >Подробнее</a
+                  >
+                </div>
+              </div>
+            </article>
+          </li>
+
+          
+        </ul>
+
+        <div class="catalog__bottom bottom-actions">
+          <button class="bottom-actions__more" type="button">
+            Загрузить еще
+          </button>
+
+          <div class="bottom-actions__pagination pagination">
+            <ul class="pagination__list">
+              <li class="pagination__item">
+                <button class="pagination__btn active" type="button">1</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__btn" type="button">2</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__btn" type="button">3</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__btn" type="button">4</button>
+              </li>
+              <li class="pagination__item">
+                <button class="pagination__btn" type="button">5</button>
+              </li>
+              <li class="pagination__item">
+                <button
+                  class="pagination__btn pagination__btn--further"
+                  type="button"
+                >
+                  Далее
+                </button>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

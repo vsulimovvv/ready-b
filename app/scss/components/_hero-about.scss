@@ -1,0 +1,33 @@
+.hero-about {
+  @include background(cover);
+
+  &__wrapper {
+    @include adaptive-value("padding-top", 90, 50, 1);
+    @include adaptive-value("padding-bottom", 115, 50, 1);
+  }
+
+  &__offer {
+    width: 58%;
+
+    @include breakpointsMaxW($bp-768) {
+      width: 80%;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include fz35();
+    color: #38354d;
+    @include adaptive-value("margin-bottom", 35, 25, 1);
+  }
+
+  &__text {
+    font-size: 15px;
+    line-height: 1.8;
+    font-weight: 400;
+    color: var(--color-dark);
+  }
+}

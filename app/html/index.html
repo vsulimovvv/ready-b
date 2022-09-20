@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    @include('./components/base/_meta.html')
+    @include('./components/base/_links.html')
+
+    <title>Готовый бизнес</title>
+  </head>
+
+  <body>
+    @include('./components/popups/_popups.html')
+
+    <div class="site-wrapper">
+      @include('./components/_header.html')
+
+      <main class="main">
+        @include('./components/_hero.html')
+        @include('./components/_business.html')
+        @include('./components/_scheme.html')
+        @include('./components/_categories.html')
+        @include('./components/_faqs.html')
+      </main>
+      @include('./components/_footer.html')
+    </div>
+
+    @include('./components/base/_scripts.html')
+  </body>
+</html>

@@ -1,0 +1,66 @@
+.consultation {
+  color: var(--color-white);
+  @include background(cover);
+  @include adaptive-value("padding-top", 100, 50, 1);
+  @include adaptive-value("padding-bottom", 100, 50, 1);
+
+  &__top {
+    text-align: center;
+    @include adaptive-value("margin-bottom", 60, 40, 1);
+  }
+
+  &__title {
+    @include adaptive-value("font-size", 40, 25, 1);
+    @include adaptive-value("margin-bottom", 25, 15, 1);
+    font-weight: 700;
+  }
+
+  &__text {
+    max-width: 700px;
+    margin: 0 auto;
+    @include adaptive-value("font-size", 15, 13, 1);
+  }
+
+  &__form-sell {
+    max-width: 560px;
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  &--light {
+    @include adaptive-value("padding-top", 80, 50, 1);
+    @include adaptive-value("padding-bottom", 115, 70, 1);
+
+    .consultation__text {
+      @include adaptive-value("font-size", 18, 15, 1);
+    }
+
+    .consultation__top {
+      @include adaptive-value("margin-bottom", 50, 35, 1);
+    }
+
+    .form-sell {
+      &__group {
+        &::after {
+          background-color: var(--color-dark);
+        }
+      }
+
+      &__input {
+        background-color: var(--color-white);
+        color: #7d7d7d;
+
+        &::placeholder {
+          color: #7d7d7d;
+        }
+      }
+
+      &__btn {
+        &:hover {
+          background-color: var(--color-white);
+          border-color: transparent;
+        }
+      }
+    }
+  }
+}

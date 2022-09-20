@@ -1,0 +1,242 @@
+.scheme {
+  background-color: var(--color-accent);
+  color: var(--color-light);
+  @include adaptive-value('padding-top', 90, 50, 1);
+  @include adaptive-value('padding-bottom', 90, 50, 1);
+
+  &__wrapper {
+    position: relative;
+    z-index: 1;
+    position: relative;
+    @include adaptive-value('padding-top', 75, 40, 1);
+
+    &::after {
+      @include elDef();
+      background-color: rgba(246, 248, 250, 0.05);
+      width: 100%;
+      height: calc(100% - 80px);
+      top: 0;
+      left: 0;
+      z-index: -1;
+      border-radius: 20px;
+    }
+  }
+
+  &__circle,
+  &__ellipse {
+    position: absolute;
+    display: block;
+    border-radius: 7px;
+  }
+
+  &__circle {
+    top: 25px;
+    right: 25px;
+    width: 20px;
+    height: 20px;
+    background-color: rgba(230, 229, 250, 0.1);
+  }
+
+  &__ellipse {
+    width: 110px;
+    height: 110px;
+    border: 15px solid rgba(230, 229, 250, 0.1);
+    background-color: transparent;
+    border-radius: 50%;
+    right: 30%;
+    top: 37%;
+
+    @include breakpointsMaxW($bp-991) {
+      right: 10%;
+      top: 23%;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      top: 33%;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      top: 30%;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    @include breakpointsMaxW($bp-360) {
+      top: 25%;
+    }
+  }
+
+  &__inner {
+    width: calc(100% - 60px);
+    margin: 0 auto;
+
+    @include breakpointsMaxW($bp-768) {
+      width: calc(100% - 30px);
+    }
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: auto auto;
+    gap: 30px 60px;
+    justify-content: start;
+    align-items: center;
+    @include adaptive-value('margin-bottom', 50, 40, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__text {
+    grid-column: 1/-1;
+    font-size: 15px;
+    @include adaptive-value('margin-bottom', 50, 40, 1);
+  }
+
+  &__title {
+    @include fz25();
+  }
+
+  &__btns {
+    .scheme__btn {
+      &:not(:last-child) {
+        margin-right: 12px;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        &:not(:last-child) {
+          margin-right: 0;
+          margin-bottom: 12px;
+        }
+      }
+    }
+  }
+
+  &__btn {
+    border-radius: 10px;
+
+    &.active {
+      background-color: var(--color-light);
+      color: var(--color-accent);
+    }
+  }
+
+  &__content {
+    display: none;
+
+    &.active {
+      display: block;
+      animation: opacity-visibility 700ms ease forwards;
+    }
+  }
+
+  &__list {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 14px;
+    counter-reset: number;
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  .scheme-item {
+    border: 1px solid var(--color-light);
+    border-radius: 10px;
+    background-color: var(--color-white);
+    padding: 25px;
+    padding-top: 115px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+
+    @include breakpointsMaxW($bp-768) {
+      padding: 25px 10px;
+      padding-top: 80px;
+    }
+
+    &::before {
+      @include elDef();
+      counter-increment: number;
+      content: '...' counter(number);
+      font-weight: 700;
+      color: #e6e5fa;
+      @include adaptive-value('font-size', 30, 16, 1);
+      @include adaptive-value('left', 20, 10, 1);
+      @include adaptive-value('top', 20, 10, 1);
+    }
+
+    &::after {
+      @include elDef();
+      width: 62px;
+      height: 62px;
+      top: 32px;
+      left: 50%;
+      transform: translateX(-50%);
+
+      @include breakpointsMaxW($bp-768) {
+        width: 42px;
+        height: 42px;
+        top: 22px;
+      }
+    }
+
+    &__name {
+      line-height: 1.2;
+      font-weight: 700;
+      color: var(--color-accent);
+      margin-bottom: 25px;
+      @include adaptive-value('font-size', 15, 13, 1);
+
+      @include breakpointsMaxW($bp-768) {
+        margin-bottom: 15px;
+        height: 35px;
+      }
+    }
+
+    &__text {
+      font-size: 13px;
+      font-weight: 400;
+      color: #858490;
+      @include adaptive-value('font-size', 13, 11, 1);
+    }
+
+    &--meet {
+      &::after {
+        @include backgroundImage(url('../images/scheme/1.png'), contain);
+      }
+    }
+
+    &--lead {
+      &::after {
+        @include backgroundImage(url('../images/scheme/2.png'), contain);
+      }
+    }
+
+    &--deal {
+      &::after {
+        @include backgroundImage(url('../images/scheme/3.png'), contain);
+      }
+    }
+
+    &--advise {
+      &::after {
+        @include backgroundImage(url('../images/scheme/4.png'), contain);
+      }
+    }
+  }
+}

@@ -1,0 +1,36 @@
+.articles {
+  @include adaptive-value("padding-top", 50, 35, 1);
+  @include adaptive-value("padding-bottom", 90, 50, 1);
+
+  &__title {
+    @include fz25();
+    @include adaptive-value("margin-bottom", 30, 20, 1);
+  }
+
+  &__text {
+    font-size: 15px;
+    color: #2c2c2c;
+    @include adaptive-value("margin-bottom", 45, 30, 1);
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 45px 35px;
+    @include adaptive-value("margin-bottom", 80, 40, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px 30px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 30px 15px;
+    }
+
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: 1fr;
+    }
+  }
+}

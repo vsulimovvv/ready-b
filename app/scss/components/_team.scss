@@ -1,0 +1,223 @@
+.team {
+  background-color: #fdfbf4;
+  @include adaptive-value("padding-top", 60, 40, 1);
+  @include adaptive-value("padding-bottom", 80, 50, 1);
+
+  &__title {
+    @include fz25();
+    @include adaptive-value("margin-bottom", 40, 30, 1);
+  }
+
+  &__top {
+    display: grid;
+    grid-template-columns: 1fr 0.9fr;
+    gap: 25px;
+    @include adaptive-value("margin-bottom", 30, 20, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__col {
+    padding: 40px 25px;
+    background-color: var(--color-white);
+    border: 3px solid #eeeff4;
+    border-radius: 10px;
+    color: #2c2c2c;
+    line-height: 2;
+
+    @include adaptive-value("padding-top", 35, 15, 1);
+    @include adaptive-value("padding-bottom", 40, 15, 1);
+    @include adaptive-value("font-size", 14, 13, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      padding-right: 15px;
+      padding-left: 15px;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      padding-right: 10px;
+      padding-left: 10px;
+    }
+
+    &:nth-child(2) {
+      padding: 40px 45px;
+      @include adaptive-value("padding-top", 40, 15, 1);
+      @include adaptive-value("padding-bottom", 40, 15, 1);
+
+      @include breakpointsMaxW($bp-991) {
+        padding-right: 20px;
+        padding-left: 20px;
+      }
+
+      @include breakpointsMaxW($bp-768) {
+        padding-right: 15px;
+        padding-left: 15px;
+      }
+
+      @include breakpointsMaxW($bp-576) {
+        padding-right: 10px;
+        padding-left: 10px;
+      }
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 10px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 15px 7px;
+    }
+
+    @include breakpointsMaxW($bp-360) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__item {
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.team-card {
+  padding: 25px;
+  background-color: var(--color-white);
+  max-width: 400px;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #eeeff4;
+  border-radius: 10px;
+  margin: 0 auto;
+
+  @include breakpointsMaxW($bp-container) {
+    padding: 15px;
+  }
+
+  @include breakpointsMaxW($bp-991) {
+    padding: 10px 10px 20px 10px;
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    padding: 7px 7px 15px 7px;
+  }
+
+  &__top {
+    width: 100%;
+    @include adaptive-value("height", 225, 120, 1);
+    @include adaptive-value("margin-bottom", 20, 15, 1);
+
+    @include breakpointsMaxW($bp-360) {
+      height: 200px;
+    }
+
+    img {
+      @include img(cover);
+    }
+  }
+
+  &__body {
+    border-bottom: 1px solid #e3e3e3;
+    @include adaptive-value("margin-bottom", 20, 15, 1);
+    @include adaptive-value("padding-bottom", 15, 10, 1);
+  }
+
+  &__title {
+    line-height: 1.4;
+    font-weight: 400;
+    color: #282828;
+
+    @include adaptive-value("font-size", 18, 14, 1);
+    @include adaptive-value("margin-bottom", 15, 10, 1);
+
+    @include breakpointsMaxW($bp-360) {
+      font-size: 15px;
+    }
+  }
+
+  &__prof {
+    font-style: italic;
+    @include adaptive-value("font-size", 14, 12, 1);
+    color: #282828;
+  }
+
+  &__bottom {
+    display: grid;
+    grid-template-columns: repeat(2, auto);
+    gap: 10px;
+    justify-content: space-between;
+    align-items: center;
+
+    @include breakpointsMaxW($bp-container) {
+      gap: 8px;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      grid-template-columns: 1fr;
+      gap: 15px;
+    }
+  }
+
+  &__phone,
+  &__email {
+    font-size: 12px;
+    line-height: 1;
+    color: #3a3d41;
+    position: relative;
+    padding-left: 23px;
+
+    @include breakpointsMaxW($bp-container) {
+      padding-left: 18px;
+      font-size: 11px;
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      padding-left: 15px;
+    }
+
+    &::after {
+      @include elDef();
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 60%;
+      transform: translateY(-50%);
+      background-color: #2c2c59;
+
+      @include breakpointsMaxW($bp-576) {
+        width: 11px;
+        height: 11px;
+      }
+    }
+  }
+
+  &__phone {
+    &::after {
+      @include maskImage(url("../images/phone.svg"), contain);
+    }
+  }
+
+  &__email {
+    &::after {
+      @include maskImage(url("../images/email.svg"), contain);
+    }
+  }
+}

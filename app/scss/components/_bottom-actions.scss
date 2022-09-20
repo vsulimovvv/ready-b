@@ -1,0 +1,49 @@
+.bottom-actions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  @include breakpointsMaxW($bp-576) {
+    flex-direction: column;
+  }
+
+  &__more {
+    position: relative;
+    font-size: 11px;
+    line-height: 1;
+    font-weight: 400;
+    color: var(--color-accent);
+    background-color: var(--color-white);
+    border: 1px solid #d7d8e4;
+    border-radius: 5px;
+    padding: 15px 27px 15px 50px;
+    transition: 200ms ease;
+    margin-right: 30px;
+
+    @include breakpointsMaxW($bp-576) {
+      margin-right: 0;
+      margin-bottom: 30px;
+    }
+
+    &:hover {
+      background-color: var(--color-accent);
+      color: var(--color-white);
+
+      &::after {
+        background-color: var(--color-white);
+      }
+    }
+
+    &::after {
+      @include elDef();
+      background-color: var(--color-accent);
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 24px;
+      transform: translateY(-50%);
+      @include maskImage(url("../images/loading.svg"), contain);
+      transition: 200ms ease;
+    }
+  }
+}

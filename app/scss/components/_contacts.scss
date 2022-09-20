@@ -1,0 +1,83 @@
+.contacts {
+  @include adaptive-value("padding-top", 60, 40, 1);
+  @include adaptive-value("padding-bottom", 175, 90, 1);
+  position: relative;
+  background-color: #fdfbf4;
+
+  &__title {
+    @include fz25();
+    @include adaptive-value("margin-bottom", 30, 20, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__top {
+    @include adaptive-value("margin-bottom", 75, 40, 1);
+    line-height: 1.8;
+
+    @include breakpointsMaxW($bp-991) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__info {
+    @include adaptive-value("margin-bottom", 40, 30, 1);
+  }
+
+  &__left {
+    width: 35%;
+
+    @include breakpointsMaxW($bp-container) {
+      width: 30%;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      margin-bottom: calc(40px + (50 - 40) * ((100vw - 320px) / (991 - 320)));
+      width: 100%;
+    }
+  }
+
+  &__text {
+    color: #2c2c2c;
+    @include adaptive-value("margin-bottom", 42, 25, 1);
+    @include adaptive-value("font-size", 15, 14, 1);
+
+    @include breakpointsMaxW($bp-991) {
+      margin-bottom: 25px;
+    }
+  }
+
+  &__item {
+    &:not(:last-child) {
+      @include adaptive-value("margin-bottom", 15, 10, 1);
+    }
+
+    a {
+      transition: 200ms;
+
+      &:hover {
+        color: var(--color-accent);
+      }
+    }
+  }
+
+  &__map {
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    top: 0;
+    right: 0;
+
+    @include breakpointsMinW(1440px) {
+      width: 55%;
+    }
+
+    @include breakpointsMaxW($bp-991) {
+      position: static;
+      width: 100%;
+      height: calc(250px + (400 - 250) * ((100vw - 320px) / (991 - 320)));
+    }
+  }
+}

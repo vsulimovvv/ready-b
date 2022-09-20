@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Favicon -->
+<link
+  rel="shortcut icon"
+  href="images/favicon.png"
+  type="image/x-icon"
+/>
+
+<!-- Link Swiper's CSS -->
+<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+<!-- nouislider -->
+<link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.css"
+/>
+
+<!-- Choices JS  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css"
+/>
+
+<!-- Custom Link -->
+<link rel="stylesheet" href="css/style.css" />
+
+
+    <title>Готовый бизнес</title>
+  </head>
+
+  <body>
+    <div class="popup popup--projects">
+  <div class="popup__container">
+    <div class="popup__top">
+      <span class="popup__name">Получить консультацию</span>
+
+      <button class="popup__close" type="button">
+        <svg>
+          <use xlink:href="images/sprite.svg#close"></use>
+        </svg>
+      </button>
+    </div>
+    <div class="popup__body">
+      <form class="form-sell form-sell--dark">
+        <label class="form-sell__group">
+          <input
+            class="form-sell__input"
+            type="tel"
+            placeholder="Введите Ваш телефон"
+          />
+        </label>
+        <button class="form-sell__btn btn btn--white" type="submit">
+          Получить консультацию
+        </button>
+        <label class="form-sell__checkbox checkbox checkbox--white">
+          <input class="checkbox__input" type="checkbox" checked />
+          <span class="checkbox__box"></span>
+          <span class="checkbox__text"
+            >Отправляя заявку я соглашаюсь на обработку персональных
+            данных</span
+          >
+        </label>
+      </form>
+    </div>
+  </div>
+</div>
+
+
+    <div class="site-wrapper">
+      <header class="header header--bg">
+  <!-- Mobile Menu -->
+  <div class="overlay"></div>
+
+  <div class="mobile-menu">
+    <div class="mobile-menu__top">
+      <a class="mobile-menu__logo logo" href="#">
+        <img src="images/logo.png" alt="логотип" />
+      </a>
+      <button
+        class="mobile-menu__close"
+        type="button"
+        aria-label="Закрыть меню"
+      >
+        <svg
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M6 6L18 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+          <path
+            d="M18 6L6 18"
+            stroke="#f1ebda"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+      </button>
+    </div>
+
+    <ul class="mobile-menu__list">
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">О программе</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Проекты</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Обучение</a>
+      </li>
+      <li class="mobile-menu__item">
+        <a class="mobile-menu__link" href="#">Полезные материалы</a>
+      </li>
+    </ul>
+
+    <div class="mobile-menu__btns">
+      <button class="mobile-menu__btn btn" type="button">Купить бизнес</button>
+      <button class="mobile-menu__btn btn btn--bordered" type="button">
+        Продать бизнес
+      </button>
+    </div>
+  </div>
+  <!-- Mobile Menu -->
+
+  <div class="container">
+    <nav class="header__wrapper">
+      <a class="header__logo logo" href="#">
+        <img src="images/logo.png" alt="Логотип" />
+      </a>
+
+      <a class="header__phone" href="+71234567890">8 (123) 456 78 90</a>
+
+      <div class="header__menu menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#"> О компании </a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Услуги</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="header__tools">
+        <button class="header__btn btn" type="button">Купить бизнес</button>
+        <button class="header__btn btn btn--bordered" type="button">
+          Продать бизнес
+        </button>
+      </div>
+
+      <button class="header__toggle" type="button" aria-label="Открыть меню">
+        <span class="header__toggle-line"></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+
+      <main class="main mt">
+        <section class="descr-services">
+  <div class="container">
+    <div class="descr-services__wrapper">
+      <div class="descr-services__side side-nav">
+        <div class="side-nav__inner">
+          <div class="side-nav__top">
+            <h2 class="side-nav__title">Услуги</h2>
+          </div>
+
+          <ul class="side-nav__list">
+            <li class="side-nav__item">
+              <a class="side-nav__link active" href="#">Оценка и консалтинг</a>
+            </li>
+            <li class="side-nav__item">
+              <a class="side-nav__link" href="#">Юридические услуги</a>
+            </li>
+            <li class="side-nav__item">
+              <a class="side-nav__link" href="#">Аудит бизнеса</a>
+            </li>
+            <li class="side-nav__item">
+              <a class="side-nav__link" href="#">Бухгалтерские услуги</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="block-consultation">
+          <div class="block-consultation__inner">
+            <div class="block-consultation__person">
+              <img
+                class="block-consultation__avatar"
+                loading="lazy"
+                src="images/person.jpg"
+                alt="person"
+              />
+              <div class="block-consultation__person-info">
+                <strong class="block-consultation__name">Елена</strong>
+                <span class="block-consultation__count">
+                  менеджер компании
+                </span>
+              </div>
+            </div>
+
+            <p class="block-consultation__heading">Получить консультацию</p>
+
+            <div class="block-consultation__descr">
+              <span>
+                Оставьте Ваш телефон и мы свяжемся с Вами, и ответим на все Ваши
+                вопросы.
+              </span>
+            </div>
+
+            <form class="block-consultation__form form-consultation">
+              <div class="form-consultation__group">
+                <label class="form-consultation__label" for="phone"
+                  >Телефон</label
+                >
+                <input
+                  class="form-consultation__input"
+                  type="tel"
+                  id="phone"
+                  placeholder="+7 (___) ___ - __ - __"
+                />
+              </div>
+
+              <button
+                class="form-consultation__btn btn btn--dark"
+                type="button"
+              >
+                Заказать звонок
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="descr-services__content">
+        <div class="descr-services__top">
+          <h1 class="descr-services__title">Оценка и консалтинг</h1>
+          <p class="descr-services__text">
+            Оценка бизнеса — это определение стоимости компании как
+            имущественного комплекса, способного приносит прибыль его владельцу.
+          </p>
+        </div>
+        <div class="descr-services__preview">
+          <img loading="lazy" src="images/descr-services.jpg" alt="services" />
+        </div>
+
+        <p class="descr-services__heading">
+          При проведении оценки предприятия определяется:
+        </p>
+
+        <ul class="descr-services__list">
+          <li class="descr-services__item">
+            Оценка всех активов: недвижимого имущества, машин, оборудования,
+            складских запасов, земельных участков, сырья и продукции,
+            нематериальных активов, финансовых вложений, имущественных
+            обязательств;
+          </li>
+          <li class="descr-services__item">
+            Отдельно оценивается эффективность работы компании, ее настоящие и
+            будущие доходы, перспективы развития бизнеса и конкурентная среда на
+            данном рынке;
+          </li>
+          <li class="descr-services__item">
+            Оценка бизнеса может включать в себя и оценку имущества, вносимого в
+            качестве вклада в Уставной капитал.
+          </li>
+        </ul>
+
+        <div class="descr-services__text">
+          <p>
+            Расчет стоимости предприятия производится с использованием, как
+            правило, нескольких методов, чтобы получить максимально достоверный
+            результат. Бизнес (предприятие) обладает всеми признаками товара и
+            может быть объектом купли-продажи. Но это товар особого рода. Эта
+            специфика предписывает Оценщику, в зависимости от конкретных
+            интересов покупателя, необходимость определять различные виды
+            стоимости данного товара: рыночную, ликвидационную, инвестиционную и
+            т.д.
+          </p>
+          <p>
+            Принципиальное значение имеет тот факт, что качественная рыночная
+            оценка не ограничивается учетом лишь одних затрат, связанных с
+            производством товара, она обязательно принимает во внимание
+            экономический имидж – положение предприятия на рынке, фактор
+            времени, риски, уровень конкуренции. Оценщик подходит к определению
+            стоимости с позиций экономической концепции фирмы. Согласно такому
+            взгляду на оценку, рыночная стоимость любого объекта, порождающего
+            доход или поток денежной наличности, определяется исходя из текущей
+            стоимости ожидаемого будущего потока наличности, дисконтированного
+            по норме процента, отражающего требуемую инвестором норму прибыли
+            для сопоставимых по риску инвестиций.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+        <section
+  class="consultation consultation--get"
+  style="background-image: url('images/consultation-get-bg.jpg')"
+>
+  <div class="container">
+    <div class="consultation__top">
+      <h2 class="consultation__title">Получите бесплатную консультацию</h2>
+
+      <p class="consultation__text">
+        Поможем оценить и подготовить ваш объект к продаже. Предложим бизнес
+        актуальным клиентам по вашей сфере, а также запустим рекламную компанию.
+      </p>
+    </div>
+
+    <form class="consultation__form-sell form-sell">
+      <label class="form-sell__group">
+        <input
+          class="form-sell__input"
+          type="tel"
+          placeholder="Введите Ваш телефон"
+        />
+      </label>
+      <button class="form-sell__btn btn btn--white" type="submit">
+        Получить консультацию
+      </button>
+      <label class="form-sell__checkbox checkbox checkbox--white">
+        <input class="checkbox__input" type="checkbox" checked />
+        <span class="checkbox__box"></span>
+        <span class="checkbox__text"
+          >Отправляя заявку я соглашаюсь на обработку персональных данных</span
+        >
+      </label>
+    </form>
+  </div>
+</section>
+
+      </main>
+      <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div class="footer__left">
+        <div class="footer__col footer__col--first">
+          <a class="footer__logo logo" href="#">
+            <img src="images/logo.png" alt="Логотип" />
+          </a>
+
+          <div class="footer__socials socials">
+            <p class="socials__name">Наши мессенджеры</p>
+            <ul class="socials__list">
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--vk"
+                  href="#"
+                  target="_blank"
+                  aria-label="vk"
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--whatsapp"
+                  href="#"
+                  target="_blank"
+                  aria-label="whatsapp"
+                ></a>
+              </li>
+              <li class="socials__item">
+                <a
+                  class="socials__link socials__link--telegram"
+                  href="#"
+                  target="_blank"
+                  aria-label="telegram"
+                ></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer__col footer__col--company">
+          <span class="footer__name">Компания </span>
+          <ul class="footer__list">
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <span>О компании</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <span>Услуги</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <span>Статьи о компании</span>
+              </a>
+            </li>
+            <li class="footer__item">
+              <a class="footer__link" href="#">
+                <span>Контакты</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__col footer__col--lists">
+          <span class="footer__name">Категории</span>
+          <div class="footer__lists">
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Автомойки</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Автосервисы</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Гостиничный бизнес</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Общепит</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Торговля</span></a>
+              </li>
+            </ul>
+
+            <ul class="footer__list">
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Производства</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Салоны красоты</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Медцентры</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Стоматологии</span></a>
+              </li>
+              <li class="footer__item">
+                <a class="footer__link" href="#"><span>Эксклюзив от Vimade</span></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer__right">
+        <div class="footer__contacts footer-contacts">
+          <span class="footer__name">Контакты</span>
+          <ul class="footer-contacts__list">
+            <li class="footer-contacts__item footer-contacts__item--address">
+              <div class="footer-contacts__icon"></div>
+              <span>Москва, ул. Название улицы 10, офис 11</span>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--phone">
+              <div class="footer-contacts__icon"></div>
+              <span>
+                Контактный телефон:
+                <a href="tel:+71234567890"> 8 (123) 456 78 90 </a>
+              </span>
+            </li>
+            <li class="footer-contacts__item footer-contacts__item--email">
+              <div class="footer-contacts__icon"></div>
+              <span>
+                Тех. поддержка:
+                <a href="mailto:support@готовый-бизнес.ru">
+                  support@готовый-бизнес.ru
+                </a>
+              </span>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__btns">
+          <button class="footer__btn btn" type="button">Купить бизнес</button>
+          <button class="footer__btn btn btn--bordered" type="button">
+            Продать бизнес
+          </button>
+          <a class="footer__btn btn btn--bordered footer__btn--up" href="#">
+            <svg class="">
+              <use xlink:href="images/sprite.svg#upper-arrow"></use>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer__bottom">
+    <div class="container">
+      <div class="footer__bottom-inner">
+        <div class="footer__copy">
+          © 2022 Vimade. Все права защищены.
+          <a href="#">Политика конфиенциальности.</a>
+        </div>
+        <a class="company" href="https://razrabotka-saita.ru/" target="_blank">
+          <span>Разработка сайта</span>
+          <img src="images/logo-company.png" alt="АдвансМедиа" />
+        </a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+    </div>
+
+    <!-- Swiper JS -->
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+<!-- nouislider -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/noUiSlider/15.5.0/nouislider.min.js"></script>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+<!-- Choices JS -->
+<script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+
+<!-- -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/imask/6.4.3/imask.min.js"
+  integrity="sha512-yJ3vm1HmQtcgeMtbUYCp7PuTLyjU+ffCnVNTuE1Uccv1BmkoaJIXt1EjBVGnscjCILc62hTJJJ2rJJBTcw8RjQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<!-- wNumb -->
+<script
+  src="https://cdnjs.cloudflare.com/ajax/libs/wnumb/1.2.0/wNumb.min.js"
+  integrity="sha512-igVQ7hyQVijOUlfg3OmcTZLwYJIBXU63xL9RC12xBHNpmGJAktDnzl9Iw0J4yrSaQtDxTTVlwhY730vphoVqJQ=="
+  crossorigin="anonymous"
+  referrerpolicy="no-referrer"
+></script>
+
+<!-- Input Mask -->
+<script
+  src="https://cdn.jsdelivr.net/npm/jquery.maskedinput@1.4.1/src/jquery.maskedinput.min.js"
+  type="text/javascript"
+></script>
+
+<!-- JS -->
+<script src="js/main.min.js"></script>
+
+  </body>
+</html>

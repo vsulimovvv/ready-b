@@ -1,0 +1,88 @@
+.form-sell {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+
+  @include breakpointsMaxW($bp-576) {
+    grid-template-columns: 1fr;
+  }
+
+  &__checkbox {
+    grid-column: 1/-1;
+  }
+
+  &__group {
+    width: 100%;
+    position: relative;
+    height: 53px;
+
+    &::after {
+      @include elDef();
+      width: 16px;
+      height: 16px;
+      top: 50%;
+      left: 20px;
+      transform: translateY(-50%);
+      @include maskImage(url("../images/phone.svg"), contain);
+      background-color: var(--color-white);
+
+      @include breakpointsMaxW($bp-576) {
+        left: 12px;
+      }
+    }
+  }
+
+  &__input {
+    width: 100%;
+    padding: 15px 15px 15px 50px;
+    outline: transparent;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    color: var(--color-white);
+
+    @include breakpointsMaxW($bp-576) {
+      padding: 15px 15px 15px 40px;
+    }
+
+    &::placeholder {
+      color: var(--color-white);
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+  }
+
+  &__btn {
+    width: 100%;
+    font-weight: 700;
+  }
+
+  &--dark {
+    grid-template-columns: 1fr;
+
+    .form-sell {
+      &__group {
+        &::after {
+          background-color: var(--color-dark);
+        }
+      }
+
+      &__input {
+        color: var(--color-dark);
+        border: 1px solid #ccc;
+
+        &::placeholder {
+          color: inherit;
+        }
+      }
+
+      &__btn {
+        background-color: var(--color-accent);
+        color: var(--color-light);
+        height: 53px;
+      }
+    }
+  }
+}

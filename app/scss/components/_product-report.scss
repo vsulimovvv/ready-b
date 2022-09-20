@@ -1,0 +1,87 @@
+.product-report {
+  @include adaptive-value("margin-bottom", 70, 40, 1);
+
+  &__title {
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    color: #232323;
+    @include adaptive-value("margin-bottom", 35, 25, 1);
+  }
+
+  &__inner {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    @include adaptive-value("margin-bottom", 30, 20, 1);
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__box {
+    border: 3px solid #e9e8ed;
+    border-radius: 5px;
+    background-color: var(--color-white);
+    @include adaptive-value("padding", 30, 10, 1);
+  }
+
+  &__item {
+    position: relative;
+    padding-left: 24px;
+
+    &::after {
+      @include elDef();
+      width: 15px;
+      height: 15px;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      @include maskImage(url("../img/tick-active.svg"), contain);
+      background-color: #8d8dae;
+    }
+
+    &:not(:last-child) {
+      @include adaptive-value("margin-bottom", 18, 10, 1);
+    }
+  }
+
+  &__list {
+    &--accent {
+      .product-report__item {
+        &::after {
+          background-color: var(--color-accent);
+        }
+      }
+    }
+  }
+
+  &__btns {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: 1fr;
+      gap: 20px;
+    }
+  }
+
+  &__btn {
+    padding: 22px;
+    width: 100%;
+
+    &.btn--bordered {
+      background-color: transparent;
+      border: 1px solid #5c5c82;
+      border-radius: 5px;
+      color: #2c2c59;
+
+      &:hover {
+        color: var(--color-white);
+        background-color: var(--color-accent);
+      }
+    }
+  }
+}

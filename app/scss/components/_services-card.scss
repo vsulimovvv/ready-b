@@ -1,0 +1,61 @@
+.services-card {
+  background-color: var(--color-white);
+  border: 1px solid #d5d5da;
+  border-radius: 5px;
+  padding: 25px;
+  padding-top: 35px;
+  padding-bottom: 40px;
+  color: #6e6a86;
+  text-align: center;
+  position: relative;
+  height: 100%;
+  max-width: 300px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include adaptive-value('padding-top', 35, 30, 1);
+  @include adaptive-value('padding-bottom', 40, 20, 1);
+
+  @include breakpointsMaxW($bp-container) {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  @include breakpointsMaxW($bp-768) {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  &__name {
+    color: var(--color-accent);
+    font-size: 15px;
+    line-height: 1;
+    font-weight: 700;
+    color: #38354d;
+    @include adaptive-value('margin-bottom', 20, 15, 1);
+  }
+
+  &__text {
+    font-size: 13px;
+    font-weight: 400;
+    @include adaptive-value('margin-bottom', 30, 20, 1);
+    flex-grow: 1;
+  }
+
+  &__btn {
+    font-size: 13px;
+    margin-top: auto;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  &__icon {
+    margin-bottom: 25px;
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+  }
+}

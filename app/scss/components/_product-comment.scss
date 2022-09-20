@@ -1,0 +1,19 @@
+.product-comment {
+  &__title {
+    @include adaptive-value("margin-bottom", 30, 20, 1);
+    font-size: 20px;
+    line-height: 1;
+    font-weight: 400;
+    color: #232323;
+  }
+
+  &__text {
+    p {
+      line-height: 1.8;
+
+      &:not(:last-child) {
+        @include adaptive-value("margin-bottom", 30, 20, 1);
+      }
+    }
+  }
+}

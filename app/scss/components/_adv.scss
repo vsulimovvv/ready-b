@@ -1,0 +1,78 @@
+.adv {
+  @include adaptive-value("padding-bottom", 110, 50, 1);
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 35px;
+    counter-reset: item;
+    background-color: transparent;
+    max-width: 970px;
+    margin: 0 auto;
+    margin-top: -35px;
+
+    @include breakpointsMaxW($bp-991) {
+      gap: 20px;
+    }
+
+    @include breakpointsMaxW($bp-768) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    @include breakpointsMaxW($bp-576) {
+      gap: 10px;
+    }
+  }
+
+  .adv-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--color-white);
+    border: 1px solid #f6f8fa;
+    border-radius: 10px;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    @include adaptive-value("padding", 25, 10, 1);
+    @include adaptive-value("padding-bottom", 30, 20, 1);
+    @include adaptive-value("padding-top", 110, 70, 1);
+
+    &::after {
+      @include elDef();
+      background-color: #eeeaff;
+      line-height: 1;
+      font-weight: 700;
+      color: #a59fbc;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      left: 50%;
+      top: 30px;
+      transform: translateX(-50%);
+      @include adaptive-value("width", 65, 40, 1);
+      @include adaptive-value("height", 65, 40, 1);
+      @include adaptive-value("font-size", 35, 16, 1);
+      @include adaptive-value("top", 30, 15, 1);
+
+      counter-increment: item;
+      content: counter(item);
+    }
+
+    &__name {
+      font-weight: 700;
+      color: var(--color-accent);
+      @include adaptive-value("font-size", 15, 12, 1);
+      @include adaptive-value("margin-bottom", 15, 10, 1);
+    }
+
+    &__text {
+      font-weight: 400;
+      line-height: 1.8;
+      color: #858490;
+      @include adaptive-value("font-size", 14, 12, 1);
+    }
+  }
+}
